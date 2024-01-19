@@ -3,7 +3,7 @@ package cn.iocoder.yudao.framework.apilog.core.service;
 /**
  * API 访问日志 Framework Service 接口
  *
- * @author 芋道源码
+ * @author changebylsx
  */
 public interface ApiAccessLogFrameworkService {
 

@@ -29,6 +29,13 @@ import java.util.List;
 import static cn.iocoder.yudao.framework.common.pojo.CommonResult.success;
 import static cn.iocoder.yudao.framework.operatelog.core.enums.OperateTypeEnum.EXPORT;
 
+/**
+ * 字典类型和字典功能。有对应的app专用接口
+ *
+ * @author laishixiong
+ * @date 2024/1/19 11:31
+ */
+
 @Tag(name = "管理后台 - 字典数据")
 @RestController
 @RequestMapping("/system/dict-data")

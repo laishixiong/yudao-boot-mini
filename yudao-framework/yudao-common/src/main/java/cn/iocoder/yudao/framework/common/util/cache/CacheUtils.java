@@ -12,12 +12,12 @@ import java.util.concurrent.Executors;
 /**
  * Cache 工具类
  *
- * @author 芋道源码
+ * @author changebylsx
  */
 public class CacheUtils {
 
     public static <K, V> LoadingCache<K, V> buildAsyncReloadingCache(Duration duration, CacheLoader<K, V> loader) {
-        Executor executor = Executors.newCachedThreadPool(  // TODO 芋艿：可能要思考下，未来要不要做成可配置
+        Executor executor = Executors.newCachedThreadPool(  // TODO 可能要思考下，未来要不要做成可配置
                 TtlExecutors.getDefaultDisableInheritableThreadFactory()); // TTL 保证 ThreadLocal 可以透传
         return CacheBuilder.newBuilder()
                 // 只阻塞当前数据加载线程，其他线程返回旧值

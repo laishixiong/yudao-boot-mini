@@ -9,8 +9,8 @@ import java.util.Arrays;
 
 /**
  * 通用状态枚举
- *
- * @author 芋道源码
+ * FIXME 修改枚举值，这个太反人类了
+ * @author changebylsx
  */
 @Getter
 @AllArgsConstructor

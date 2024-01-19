@@ -3,7 +3,7 @@ package cn.iocoder.yudao.framework.file.core.client;
 /**
  * 文件客户端
  *
- * @author 芋道源码
+ * @author changebylsx
  */
 public interface FileClient {
 

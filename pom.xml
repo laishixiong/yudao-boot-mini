@@ -48,6 +48,7 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- dependencyManageMent里面还可以依赖另外一个d-m -->
             <dependency>
                 <groupId>cn.iocoder.boot</groupId>
                 <artifactId>yudao-dependencies</artifactId>

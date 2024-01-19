@@ -28,7 +28,7 @@ import static cn.iocoder.yudao.framework.common.util.json.JsonUtils.toJsonString
 /**
  * API 访问日志 Filter
  *
- * @author 芋道源码
+ * @author changebylsx
  */
 @Slf4j
 public class ApiAccessLogFilter extends ApiRequestFilter {

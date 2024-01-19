@@ -12,8 +12,8 @@
     <packaging>jar</packaging>
 
     <name>${project.artifactId}</name>
-    <description>短信拓展，支持阿里云、腾讯云</description>
-    <url>https://github.com/YunaiV/ruoyi-vue-pro</url>
+    <description>短信拓展，支持阿里云、腾讯云，信息发送相关接口，可以加入发送钉钉、企业微信等等</description>
+    <url></url>
 
     <dependencies>
         <dependency>

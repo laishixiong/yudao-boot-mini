@@ -73,13 +73,19 @@ public class AliyunSmsClient extends AbstractSmsClient {
                                   List<KeyValue<String, Object>> templateParams) throws Throwable {
         // 构建请求
         SendSmsRequest request = new SendSmsRequest();
+        // 阿里云规定规范，手机号码
         request.setPhoneNumbers(mobile);
+        // 短信签名，短信开头【xx公司xxxx】
         request.setSignName(properties.getSignature());
+        // 阿里云上面申请的短信模版编码
         request.setTemplateCode(apiTemplateId);
+        // 短信模版里面有占位符，比如“您正在申请手机注册，验证码为：${code}，5分钟内有效！” templateParams就放置了key对应value
         request.setTemplateParam(JsonUtils.toJsonString(MapUtils.convertMap(templateParams)));
+        // 外部流水扩展字段 ,可以不填
         request.setOutId(String.valueOf(sendLogId));
         // 执行请求
         SendSmsResponse response = client.getAcsResponse(request);
+        // TODO 可以优化的地方，加入发送失败的补偿操作
         return new SmsSendRespDTO().setSuccess(Objects.equals(response.getCode(), API_CODE_SUCCESS)).setSerialNo(response.getBizId())
                 .setApiRequestId(response.getRequestId()).setApiCode(response.getCode()).setApiMsg(response.getMessage());
     }

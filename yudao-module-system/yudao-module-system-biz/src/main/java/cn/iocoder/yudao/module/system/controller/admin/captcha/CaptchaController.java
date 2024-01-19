@@ -25,6 +25,8 @@ public class CaptchaController {
     @Resource
     private CaptchaService captchaService;
 
+    // 验证码提供了很多类型的。工具来自：captcha-plus。这个工具里面内置了图片，然后提供了用户拖拉数据的校验，完全离线操作。
+    // https://gitee.com/cgb-lowcode/captcha-plus
     @PostMapping({"/get"})
     @Operation(summary = "获得验证码")
     @PermitAll

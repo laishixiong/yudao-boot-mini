@@ -4,13 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- 独立的一个模块，没有父类，不依赖其他 -->
     <groupId>cn.iocoder.boot</groupId>
     <artifactId>yudao-dependencies</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
 
     <name>${project.artifactId}</name>
-    <description>基础 bom 文件，管理整个项目的依赖版本</description>
+    <description>基础 bom 文件，管理整个项目的依赖版本,整个项目的依赖版本号都放到这个里面进行维护</description>
     <url>https://github.com/YunaiV/ruoyi-vue-pro</url>
 
     <properties>
@@ -109,11 +110,7 @@
                 <artifactId>yudao-spring-boot-starter-biz-sms</artifactId>
                 <version>${revision}</version>
             </dependency>
-            <dependency>
-                <groupId>cn.iocoder.boot</groupId>
-                <artifactId>yudao-spring-boot-starter-biz-pay</artifactId>
-                <version>${revision}</version>
-            </dependency>
+
             <dependency>
                 <groupId>cn.iocoder.boot</groupId>
                 <artifactId>yudao-spring-boot-starter-biz-tenant</artifactId>
@@ -124,11 +121,7 @@
                 <artifactId>yudao-spring-boot-starter-biz-data-permission</artifactId>
                 <version>${revision}</version>
             </dependency>
-            <dependency>
-                <groupId>cn.iocoder.boot</groupId>
-                <artifactId>yudao-spring-boot-starter-biz-social</artifactId>
-                <version>${revision}</version>
-            </dependency>
+
             <dependency>
                 <groupId>cn.iocoder.boot</groupId>
                 <artifactId>yudao-spring-boot-starter-biz-error-code</artifactId>
@@ -395,11 +388,7 @@
             </dependency>
 
             <!-- 工作流相关 -->
-            <dependency>
-                <groupId>cn.iocoder.boot</groupId>
-                <artifactId>yudao-spring-boot-starter-flowable</artifactId>
-                <version>${revision}</version>
-            </dependency>
+
             <dependency>
                 <groupId>org.flowable</groupId>
                 <artifactId>flowable-spring-boot-starter-process</artifactId>
@@ -621,31 +610,6 @@
                 <groupId>com.github.binarywang</groupId>
                 <artifactId>wx-java-miniapp-spring-boot-starter</artifactId>
                 <version>${weixin-java.version}</version>
-            </dependency>
-
-            <!-- 积木报表-->
-            <dependency>
-                <groupId>org.jeecgframework.jimureport</groupId>
-                <artifactId>jimureport-spring-boot-starter</artifactId>
-                <version>${jimureport.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>com.alibaba</groupId>
-                        <artifactId>druid</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>xerces</groupId>
-                <artifactId>xercesImpl</artifactId>
-                <version>${xercesImpl.version}</version>
-            </dependency>
-
-            <!-- UReport2 报表-->
-            <dependency>
-                <groupId>com.bstek.ureport</groupId>
-                <artifactId>ureport2-console</artifactId>
-                <version>${ureport2.version}</version>
             </dependency>
 
         </dependencies>

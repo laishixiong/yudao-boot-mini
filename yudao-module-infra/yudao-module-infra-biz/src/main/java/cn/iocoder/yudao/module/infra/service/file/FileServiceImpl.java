@@ -37,6 +37,7 @@ public class FileServiceImpl implements FileService {
     }
 
     @Override
+    // 语法糖，会自动在编译的时候包裹tyr catch
     @SneakyThrows
     public String createFile(String name, String path, byte[] content) {
         // 计算默认的 path 名
